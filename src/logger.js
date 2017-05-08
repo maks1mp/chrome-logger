@@ -59,10 +59,16 @@ let logger = {
     },
     success(){
         this.send('success', ...arguments);
+    },
+    warning(){
+        this.send('warning', ...arguments);
+    },
+    error(){
+        this.send('error', ...arguments);
     }
-
 }
-logger.success('hello');
-logger.send('success', 1,2,3,4,'hello', {title: 'gusman'}, undefined, ['q', 'w', 'e']);
 
+logger.success({
+    hello: 'data'
+});
 
